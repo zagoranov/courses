@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Courses!</h1>
+<div>
+    <h2>Csrf</h2>
+    {{ csrf_token }}
+</div>
+<div>
+    <h2>DB</h2>
+    {{ user }}
+    {{ user.username }}
+</div>
+<div>
+    <h2>Args</h2>
+    {{ foo }}
+    {{ spam }}
+</div>
+</body>
+</html>

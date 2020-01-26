@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <title>Courses</title>
+</head>
+<body>
+<div class="page-header">
+    <h1>><a href="/">Courses</a></h1>
+</div>
+<div class="content container">
+    <div class="row">
+          <div class="col-md-8">
+            {% for course in courses %}
+            <div class="post">
+                <h2><a href="{% url 'course_detail' pk=course.pk %}">{{ course.name }}</a></h2>
+                <p>Teacher: {{ course.lector.full_name }}</p>
+                <p>{{ course.description|linebreaksbr }}</p>
+            </div>
+            {% endfor %}
+          </div>
+    </div>
+</div>
+</body>
+</html>

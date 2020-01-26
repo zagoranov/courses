@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <title>Course details</title>
+</head>
+<body>
+<div class="page-header">
+    <h1>><a href="/">Course:{{course.name}}</a></h1>
+</div>
+<div class="content container">
+    <div>
+         <h2>Teacher:{{course.lector.full_name}}</h2>
+    </div>
+    <div>
+         <button type="button" class="btn btn-primary">Sign in!</button>
+    </div>
+    <div>
+         <h2>Lessons:</h2>
+    </div>
+    <div class="row">
+          <div class="col-md-8">
+            {% for lesson in lessons %}
+                <div class="post">
+                    <h3><a href="">{{ lesson.name }}</a></h3>
+                    <p>{{ lesson.description|linebreaksbr }}</p>
+                    <div class="date">
+                         {{ lesson.date_start }}
+                    </div>
+                </div>
+            {% endfor %}
+          </div>
+    </div>
+</div>
+</body>
+</html>
