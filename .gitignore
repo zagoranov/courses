@@ -3,3 +3,4 @@ venv
 courses/__pycache__
 learnlearn/__pycache__
 versions
+db.sqlite3
